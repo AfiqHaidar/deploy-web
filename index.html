@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Style/container.css">
+    <link rel="stylesheet" href="Style/filter-col.css">
+    <link rel="stylesheet" href="Style/filter-header.css">
+    <link rel="stylesheet" href="Style/filter-toggle.css">
+    <link rel="stylesheet" href="Style/layout.css">
+
+    <!-- Import Montserrat font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+    <!-- CDN ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <!-- CDN Icons -->
+    <script src="https://kit.fontawesome.com/11f8f0d58c.js" crossorigin="anonymous"></script>
+ </head>
+<body>
+    <div class="dashboard">
+
+    <header>
+        <h1>PIZZA SALES DASHBOARD</h1>
+    </header>
+
+    <div class="filter-toggle">
+        <a href="#content-1" class="accordion-toggle" id="accordion-toggle">
+            FILTER
+            <i class="fa-solid fa-chevron-down rotate-icon" id="chevron-down"></i>
+        </a>
+    </div>
+    
+    <div class="filter" id="content-1">
+        <div class="filter-header">
+            <div class="line"></div>
+            <div class="filter-header-title">
+                <p >Months</p>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="filter-col">
+            <div class="check-container">
+                <label for="january">Jan</label>
+                <input type="checkbox" id="january" name="month" value="January" checked onchange="handleCheckboxChange()">
+                
+            </div>
+            <div class="check-container">
+                <label for="february">Feb</label>
+                <input type="checkbox" id="february" name="month" value="February" checked onchange="handleCheckboxChange()">
+                
+            </div>
+            <div class="check-container">
+                <label for="march">Mar</label>
+                <input type="checkbox" id="march" name="month" value="March" onchange="handleCheckboxChange()" checked>
+                
+            </div>
+            <div class="check-container">
+                <label for="april">Apr</label>
+                <input type="checkbox" id="april" name="month" value="April" onchange="handleCheckboxChange()" checked>
+                
+            </div>
+            <div class="check-container">
+                <label for="may">May</label>
+                <input type="checkbox" id="may" name="month" value="May" onchange="handleCheckboxChange()" checked>
+                
+            </div>
+            <div class="check-container">
+                <label for="june">Jun</label>
+                <input type="checkbox" id="june" name="month" value="June" onchange="handleCheckboxChange()" checked>
+                
+            </div>
+            <div class="check-container">
+                <label for="july">Jul</label>
+                <input type="checkbox" id="july" name="month" value="July" onchange="handleCheckboxChange()" checked>
+                
+            </div>
+            <div class="check-container">
+                <label for="august">Aug</label>
+                <input type="checkbox" id="august" name="month" value="August" onchange="handleCheckboxChange()" checked>
+                
+            </div>
+            <div class="check-container">
+                <label for="september">Sep</label>
+                <input type="checkbox" id="september" name="month" value="September" onchange="handleCheckboxChange()" checked>
+                
+            </div>
+            <div class="check-container">
+                <label for="october">Oct</label>
+                <input type="checkbox" id="october" name="month" value="October" onchange="handleCheckboxChange()" checked>
+                
+            </div>
+            <div class="check-container">
+                <label for="november">Nov</label>
+                <input type="checkbox" id="november" name="month" value="November" onchange="handleCheckboxChange()" checked>
+                
+            </div>
+            <div class="check-container">
+                <label for="december">Dec</label>
+                <input type="checkbox" id="december" name="month" value="December" onchange="handleCheckboxChange()" checked>
+            </div>
+        </div>
+        <div class="filter-header">
+            <div class="line"></div>
+            <div class="filter-header-title">
+                <p >Days</p>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="filter-col" id="filter-days">
+            <div class="check-container">
+                <input type="checkbox" id="monday" name="day" value="Monday" onchange="handleCheckboxChange()" checked>
+                <label for="monday">Monday</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="tuesday" name="day" value="Tuesday" onchange="handleCheckboxChange()" checked>
+                <label for="tuesday">Tuesday</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="wednesday" name="day" value="Wednesday" onchange="handleCheckboxChange()" checked>
+                <label for="wednesday">Wednesday</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="thursday" name="day" value="Thursday" onchange="handleCheckboxChange()" checked>
+                <label for="thursday">Thursday</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="friday" name="day" value="Friday" onchange="handleCheckboxChange()" checked>
+                <label for="friday">Friday</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="saturday" name="day" value="Saturday" onchange="handleCheckboxChange()" checked>
+                <label for="saturday">Saturday</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="sunday" name="day" value="Sunday" onchange="handleCheckboxChange()" checked>
+                <label for="sunday">Sunday</label>
+            </div>
+        </div>
+        <div class="filter-header">
+            <div class="line"></div>
+                <div class="filter-header-title">
+                    <p >Price Range</p>
+                </div>
+            <div class="line"></div>
+        </div>
+        <div class="filter-col" id="filter-pr">
+            <div class="check-container">
+                <input type="checkbox" id="priceRange1" name="priceRange" value="< 10" onchange="handleCheckboxChange()" checked>
+                <label for="priceRange1">&lt; 10</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="priceRange2" name="priceRange" value="10 - 15" onchange="handleCheckboxChange()" checked>
+                <label for="priceRange2">10 - 15</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="priceRange3" name="priceRange" value="15 - 20" onchange="handleCheckboxChange()" checked>
+                <label for="priceRange3">15 - 20</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="priceRange4" name="priceRange" value="20 - 25" onchange="handleCheckboxChange()" checked>
+                <label for="priceRange4">20 - 25</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="priceRange5" name="priceRange" value="25 - 30" onchange="handleCheckboxChange()" checked>
+                <label for="priceRange5">25 - 30</label>
+            </div>
+            <div class="check-container">
+                <input type="checkbox" id="priceRange6" name="priceRange" value="> 30" onchange="handleCheckboxChange()" checked>
+                <label for="priceRange6">&gt; 30</label>
+            </div>
+        </div>
+        <div class="filter-header">
+            <div class="line"></div>
+            <div class="filter-header-title">
+                <p >Periods</p>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="filter-col" id="filter-period">
+            <div class="check-container">
+                <label for="period1">Morning</label>
+                <input type="checkbox" id="period1" name="period" value="Morning" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="period2">Night</label>
+                <input type="checkbox" id="period2" name="period" value="Night" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="period3">Afternoon</label>
+                <input type="checkbox" id="period3" name="period" value="Afternoon" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="period4">Evening</label>
+                <input type="checkbox" id="period4" name="period" value="Evening" onchange="handleCheckboxChange()" checked>
+            </div>
+        </div>
+        <div class="filter-header">
+            <div class="line"></div>
+            <div class="filter-header-title">
+                <p >Category</p>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="filter-col" id="filter-cat">
+            <div class="check-container">
+                <label for="category1">Classic</label>
+                <input type="checkbox" id="category1" name="category" value="Classic" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="category2">Veggie</label>
+                <input type="checkbox" id="category2" name="category" value="Veggie" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="category3">Supreme</label>
+                <input type="checkbox" id="category3" name="category" value="Supreme" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="category4">Chicken</label>
+                <input type="checkbox" id="category4" name="category" value="Chicken" onchange="handleCheckboxChange()" checked>
+            </div>
+        </div>
+        <div class="filter-header">
+            <div class="line"></div>
+            <div class="filter-header-title">
+                <p >Size</p>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="filter-col" id="filter-size">
+            <div class="check-container">
+                <label for="size1">S</label>
+                <input type="checkbox" id="size1" name="size" value="S" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="size2">M</label>
+                <input type="checkbox" id="size2" name="size" value="M" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="size3">L</label>
+                <input type="checkbox" id="size3" name="size" value="L" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="size4">XL</label>
+                <input type="checkbox" id="size4" name="size" value="XL" onchange="handleCheckboxChange()" checked>
+            </div>
+            <div class="check-container">
+                <label for="size5">XXL</label>
+                <input type="checkbox" id="size5" name="size" value="XXL" onchange="handleCheckboxChange()" checked>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="container">
+            <div class="container-heading">
+                Order Per Pizza Size
+            </div>
+            <div class="container-content">
+                <!-- <canvas id="size" style="width:50%;max-width:400px"></canvas> -->
+                <div id="summary">
+                    <h3 id="total-revenue"></h3>
+                    <h3 id="total-order"></h3>
+                    <ul id="top-5-pizza"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-heading">
+                Monthly Sales Revenue
+            </div>
+            <div class="container-content">
+                <!-- <canvas id="price" style="width:50%;max-width:400px"></canvas> -->
+                <canvas id="revenue" ></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-heading">
+                Order Per Pizza Category
+            </div>
+            <div class="container-content">
+                <!-- <canvas id="type" style="width:50%;max-width:400px;"></canvas> -->
+                <canvas id="cat" ></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-heading">
+                Order Per Pizza Size
+            </div>
+            <div class="container-content">
+                <!-- <canvas id="sales" style="width:50%;max-width:400px"></canvas> -->
+                <canvas id="size" ></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-heading">
+                Order Per Pizza Price
+            </div>
+            <div class="container-content">
+                <!-- <canvas id="cat" style="width:50%;max-width:400px"></canvas> -->
+                <canvas id="price" ></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    
+    </div>
+
+    <script src="Script/rotate.js"></script>
+    <script src="Script/accordion.js"></script>
+    <script src="Script/summary.js"></script> 
+
+    <script>
+        var months = [];
+        var days = [];
+        var priceRange = [];
+        var periods = [];
+        var category = [];
+        var sizep = [];
+
+        function handleCheckboxChange() {
+            const monthCheckboxes = document.querySelectorAll('.filter input[name="month"]');
+            const dayCheckboxes = document.querySelectorAll('.filter input[name="day"]');
+            const priceRangeCheckboxes = document.querySelectorAll('.filter input[name="priceRange"]');
+            const periodCheckboxes = document.querySelectorAll('.filter input[name="period"]');
+            const categoryCheckboxes = document.querySelectorAll('.filter input[name="category"]');
+            const sizeCheckboxes = document.querySelectorAll('.filter input[name="size"]');
+
+            months = Array.from(monthCheckboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+            days = Array.from(dayCheckboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+            priceRange = Array.from(priceRangeCheckboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+            periods = Array.from(periodCheckboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+            category = Array.from(categoryCheckboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+            sizep = Array.from(sizeCheckboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+
+            console.log("checked months : " + months);
+
+            // Pass the checked values to a function in data.js
+            processData({ months, days, priceRange, periods, category, sizep });
+        }
+    </script>
+ 
+    <script src="\Chart\MonthlyRevenueSales.js"></script>
+    <script src="\Chart\OrderPerPizzaCat.js"></script> 
+    <script src="\Chart\OrderPerPizzaSize.js"></script> 
+    <script src="\Chart\OrderPerPizzaPrice.js"></script>
+    <!-- <script src="\Chart\OrderPerPizzaType.js"></script>  -->
+    <script src="\data.js"></script> 
+    <script>handleCheckboxChange();</script>
+ </body>
+</html>
