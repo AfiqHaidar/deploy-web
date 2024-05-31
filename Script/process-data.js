@@ -32,11 +32,14 @@ function processData({ months: selectedMonths, days: selectedDays, priceRange: s
      const revenuePerMonths = {};
      const orderPerMonths = {};
      const orderPerPrice = {};
+     const orderPerPricePie = {};
      const orderPerSize = {};
+     const orderPerSizePie = {};
      const orderPerCategory = {};
+     const orderPerCategoryPie = {};
      const pizzaTypeCount  = {};
     
-    fetch('Data/pizza_sales_data.json')
+    fetch('/data/pizza_sales_data.json')
     .then(response => response.json())
     .then(data => {
 
@@ -59,6 +62,7 @@ function processData({ months: selectedMonths, days: selectedDays, priceRange: s
         
 
         priceRange.forEach(price => {
+            orderPerPricePie[price] = 0;
             orderPerPrice[price] = {}; 
             months.forEach(month => {
                 orderPerPrice[price][month] = 0; 
@@ -66,6 +70,7 @@ function processData({ months: selectedMonths, days: selectedDays, priceRange: s
         });
 
         sizep.forEach(size => {
+            orderPerSizePie[size] = 0;
             orderPerSize[size] = {}; 
             months.forEach(month => {
                 orderPerSize[size][month] = 0; 
@@ -73,6 +78,7 @@ function processData({ months: selectedMonths, days: selectedDays, priceRange: s
         });
 
         category.forEach(category => {
+            orderPerCategoryPie[category] = 0;
             orderPerCategory[category] = {}; 
             months.forEach(month => {
                 orderPerCategory[category][month] = 0;
@@ -100,10 +106,14 @@ function processData({ months: selectedMonths, days: selectedDays, priceRange: s
 
                 //  unique orders related
                 orderPerMonths[month] += 1;
-                orderPerPrice[pr][month] += 1;
-                orderPerCategory[cat][month] += 1;
-                orderPerSize[sz][month] += 1;
+               
             }
+            orderPerPrice[pr][month] += parseInt(order.Quantity);
+            orderPerPricePie[pr] += parseInt(order.Quantity);
+            orderPerCategory[cat][month] += parseInt(order.Quantity);
+            orderPerCategoryPie[cat] += parseInt(order.Quantity);
+            orderPerSize[sz][month] += parseInt(order.Quantity);
+            orderPerSizePie[sz] += parseInt(order.Quantity); 
 
             revenuePerMonths[month] += price;
 
@@ -127,11 +137,28 @@ function processData({ months: selectedMonths, days: selectedDays, priceRange: s
         console.log(orderPerPrice);
         console.log(pizzaTypeCount);
         console.log(top5pizza);
+        console.log(orderPerCategoryPie);
 
-        orderPerPizzaPrice ( months, priceRange, orderPerPrice);
-        orderPerPizzaSize(months, sizep, orderPerSize);
-        orderPerPizzaCat(months, category, orderPerCategory);
-        monthlyRevenue(months, revenuePerMonths);
-        displaySummaryData(top5pizza, totalRevenue, totalOrder);
+        
+        
+        function safeFunctionCall(functionName, ...args) {
+            if (typeof window[functionName] === 'function') {
+                window[functionName](...args);
+            } else {
+                console.warn(`Function ${functionName} does not exist.`);
+            }
+        }
+        
+        safeFunctionCall('orderPerPizzaPrice', months, priceRange, orderPerPrice);
+        safeFunctionCall('orderPerPizzaSize', months, sizep, orderPerSize);
+        safeFunctionCall('orderPerPizzaCat', months, category, orderPerCategory);
+        safeFunctionCall('monthlyRevenue', months, revenuePerMonths);
+        safeFunctionCall('displaySummaryData', top5pizza, totalRevenue, totalOrder);
+        safeFunctionCall('displayRankData', top5pizza, totalRevenue, totalOrder);
+        
+        safeFunctionCall('orderPerPizzaCatpie', category, orderPerCategoryPie);
+        safeFunctionCall('orderPerPizzaPricepie', priceRange, orderPerPricePie);
+        safeFunctionCall('orderPerPizzaSizepie', sizep, orderPerSizePie);
+        
     });    
 }

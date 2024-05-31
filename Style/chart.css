@@ -1,0 +1,77 @@
+.detail-title {
+    font-size: x-large;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+
+    transition: color 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.back-button:hover {
+    color: rgb(188, 188, 188);
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+#monthly-revenue {
+    width: 70%;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    transition: transform 0.3s ease;/* Corrected transition property */
+}
+
+#monthly-revenue-detail, #pizza-price-detail, #pizza-cat-detail, #pizza-size-detail {
+    width: 100%;
+
+}
+
+.double-chart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.lined {
+    width: 70%;
+}
+
+.pied {
+    width: 30%;
+}
+
+
+#monthly-revenue:hover {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    transform: scale(1.01); 
+    
+}
+
+#pizza-cat, #pizza-size, #pizza-price {
+    transition: background-color 0.5s ease;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+#pizza-cat:hover , #pizza-size:hover , #pizza-price:hover  {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    cursor: pointer;
+    transform: scale(1.01); 
+}
+
+/* .sizePieContainer {
+    max-height: 0;
+   display: none;
+}
+
+.sizePieContainer.swap {
+    max-height: fit-content;
+    display: contents;
+} */

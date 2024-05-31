@@ -1,0 +1,160 @@
+
+.filter {
+    width: 100%;
+    position: relative;
+}
+
+.toggle-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+
+    color: white;
+    text-decoration: none;
+    z-index: 2147483647;
+
+    transition: color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.month-toggle.rotated {
+    color: #FF3627;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 2147483647;
+}
+
+ .day-toggle.rotated {
+    color: #FF5A2B;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 2147483647;
+}
+
+ .period-toggle.rotated {
+    color: #FF792F;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 2147483647;
+}
+
+.pr-toggle.rotated {
+    color: #FF9232;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 2147483647;
+}
+
+
+.cat-toggle.rotated {
+    color: #FFB235;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 2147483647;
+}
+
+
+ .size-toggle.rotated  {
+    color: #FFDF3B;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 2147483647;
+}
+
+.toggle-filter:hover, .month-toggle.rotated:hover, .day-toggle.rotated:hover, .period-toggle.rotated:hover,
+.pr-toggle.rotated:hover, .cat-toggle.rotated:hover, .size-toggle.rotated:hover  {
+    background-color: rgb(15, 15, 15);
+    z-index: 2147483647;
+}
+
+.toggle-filter-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 2147483647;
+}
+
+.arrow-month, .arrow-day, .arrow-period,
+.arrow-pr, .arrow-cat, .arrow-size {
+    transition: transform 0.3s ease-in-out; 
+}
+
+.arrow-month.rotated, .arrow-day.rotated, .arrow-period.rotated,
+.arrow-pr.rotated, .arrow-cat.rotated, .arrow-size.rotated  {
+    transform: rotate(90deg);
+}
+
+.checkbox-month, .checkbox-day, .checkbox-period,
+.checkbox-pr, .checkbox-cat, .checkbox-size   {
+    transition:  opacity 0.5s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+
+    position: absolute;
+    top: 45px;
+    left: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 9;
+
+
+    color: white;
+    background-color: rgb(26, 26, 26);
+    
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.checkbox-month.active, .checkbox-day.active , .checkbox-period.active,
+.checkbox-pr.active, .checkbox-size.active , .checkbox-cat.active   {
+    transition:  opacity 0.5s ease;
+    overflow: unset;
+    height: fit-content;
+    max-height:  700px;
+    opacity: 1;
+
+    position: absolute;
+    top: 45px;
+    left: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 9;
+
+    color: white;
+    background-color: rgb(26, 26, 26);
+    
+    padding: 20px;
+    border-radius: 10px;
+   
+}
+
+.check-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-left: 3px solid orange;
+    background-color: #470200;
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+
+    width: 130px;
+    height: fit-content;
+    padding: 10px;
+    z-index: 10;
+}
+
+.check-container input[type="checkbox"] {
+    width: 20px; /* Adjust the width */
+    height: 20px; /* Adjust the height */
+}

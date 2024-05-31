@@ -15,29 +15,42 @@ function monthlyRevenue(months, revenuePerMonths) {
               label: 'Revenue',
               data: revenuePerMonths, 
               borderWidth: 1,
-              barThickness: 20 
+              barThickness: 20,
+              backgroundColor: '#FF2D2670',
           }]
       },
-      plugins: [ChartDataLabels],
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+      options: {
+        plugins: {
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 16
+                    }
                 }
             },
-            plugins: {
-              datalabels: {
-                  anchor: 'end',
-                  align: 'end',
-                  color: 'black',
-                  font: {
-                      weight: 'bold'
-                  },
-                  formatter: function(value, context) {
-                      return value;
+            datalabels: {
+                formatter: function(value, context) {
+                    return value;
                   }
+            },
+        },
+        scales: {
+            x: {
+              ticks: {
+                font: {
+                    size: 16 // Set the font size for the x-axis labels (months)
+                }
               }
-          }
+            },
+            y: {
+                ticks: {
+                  font: {
+                      size: 16 // Set the font size for the x-axis labels (months)
+                  }
+                }
+              }
         }
+    }
     });
 }

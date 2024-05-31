@@ -1,0 +1,179 @@
+.sidebar-head {
+    /* height: fit-content;
+    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; */
+
+    height: fit-content;
+    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.pizza-logo {
+    /* width: 15%; */
+    width: 70px;
+}
+
+.img-sides {
+    width: 50px;
+}
+
+.about-us-sides {
+    background-color: rgba(156, 25, 21, 0.875);
+    transition: background-color 0.5s ease;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 100%;
+}
+
+.about-us-sides:hover {
+    background-color: rgba(227, 38, 31, 0.875);;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 100%;
+}
+
+.sidebar-title {
+    /* display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: larger;
+    letter-spacing: 1px;  */
+
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size:xx-large;
+    letter-spacing: 1px; 
+}
+
+.sidebar-image-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.sidebar-title-top {
+    color: white;
+}
+
+.sidebar-title-bot {
+    background: linear-gradient(90deg, rgba(255,45,38,1) 0%, rgba(255,99,44,1) 35%, rgba(255,229,59,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+}
+
+.sidebar-body {
+    /* height: fit-content;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px; */
+
+    height: fit-content;
+    margin: 10px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.time-filter {
+    height: fit-content;
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+
+}
+
+
+.time-filter::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: 5; /* Ensure the pseudo-element is behind the content */
+    border-radius: 12px; /* Match the border-radius of the .pizza-filter */
+    padding: 2px; /* Space between the pseudo-element and the .pizza-filter border */
+    background: linear-gradient(90deg, rgba(255,45,38,1) 0%, rgba(255,99,44,1) 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude; 
+    -webkit-mask-composite: destination-out;
+}
+
+.pizza-filter {
+    height: fit-content;
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.pizza-filter::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: 5; /* Ensure the pseudo-element is behind the content */
+    border-radius: 12px; /* Match the border-radius of the .pizza-filter */
+    padding: 2px; /* Space between the pseudo-element and the .pizza-filter border */
+    background: linear-gradient(90deg,  rgba(255,99,44,1) 0%, rgba(255,229,59,1) 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude; 
+    -webkit-mask-composite: destination-out;
+}

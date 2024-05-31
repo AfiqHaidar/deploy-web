@@ -1,0 +1,66 @@
+.summary {
+    height: fit-content;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.summary-data {
+    height: fit-content;
+    width: 50%;
+
+    border-radius: 10px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(15, 15, 15);
+
+    color: white;
+}
+
+.summary-title {
+    width: 100%;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.summary-title-text-1 {
+    background: linear-gradient(90deg, #FF2D26 0%,  #FF632C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+}
+
+.summary-title-text-2 {
+    background: linear-gradient(90deg, #FF9232 0%,  #FFB235 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+}
+
+.fa-file-invoice-dollar{
+    color: #FF792F;
+}
+
+.fa-pizza-slice{
+    color: #FFDF3B;
+}
+
+.summary-number {
+    width: 100%;
+    font-size: xx-large;
+    text-align: center;
+}
+

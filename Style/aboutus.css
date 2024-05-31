@@ -1,0 +1,75 @@
+.about-us-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr); /* 4 columns with equal width */
+    grid-template-rows: repeat(2, auto);   /* 3 rows, auto height */
+    gap: 10px; /* Optional: adds space between grid items */
+} 
+
+.person-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Horizontally center the content */
+    align-items: center; 
+    position: relative;
+        
+    background-color: #f9f9f9;
+    color: black;/* Optional: adds a background color to each grid item */
+
+    border-radius: 20px;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+
+
+    font-size: medium;
+    font-weight: bold;
+}
+
+.person-grid::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: 5; /* Ensure the pseudo-element is behind the content */
+    border-radius: 25px; /* Match the border-radius of the .pizza-filter */
+    padding: 6px; /* Space between the pseudo-element and the .pizza-filter border */
+    background: linear-gradient(90deg,  rgba(255,99,44,1) 0%, rgba(255,229,59,1) 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude; 
+    -webkit-mask-composite: destination-out;
+}
+
+.profile-pict {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.person-name {
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+
+.person-grid:hover{
+ .person-name {
+    opacity: 1;
+ }
+}
+

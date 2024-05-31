@@ -406,7 +406,9 @@
                 <div class="summary">
                     <div class="summary-data">
                         <div class="summary-title">
-                            <div class="summary-title-text-1">PIZZA SALES REVENUE</div>
+                            <div class="summary-title-text-1">
+                                PIZZA SALES REVENUE
+                            </div>
                             <i class="fa-solid fa-file-invoice-dollar fa-2xl"></i>
                         </div>
                         <div id="total-revenue" class="summary-number">
@@ -424,134 +426,19 @@
                     </div>
                 </div>
                 <div class="overall-content">
-                    <div class="content-container" id="pizza-rank">
-                        <div class="container-title rank-title">
-                            <div>
-                                TOP 5 PIZZA SALES
-                            </div>
-                            <i class="fa-solid fa-ranking-star fa-2xl"></i>
-                        </div>
-                        <div class="pizza-rank-container rank1-pizza">
-                            <div class="rank-pizza-title">
-                                <div id="rank1-pizza-order">
-                                   
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="rank-pizza-name" id="rank1-pizza-name">
-
-                            </div>
-                        </div>
-                        <div class="pizza-rank-container rank2-pizza">
-                            <div class="rank-pizza-title">
-                                <div id="rank2-pizza-order">
-                                  
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="rank-pizza-name" id="rank2-pizza-name">
-
-                            </div>
-                        </div>
-                        <div class="pizza-rank-container rank3-pizza">
-                            <div class="rank-pizza-title">
-                                <div id="rank3-pizza-order">
-                                   
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="rank-pizza-name" id="rank3-pizza-name">
-
-                            </div>
-                        </div>
-                        <div class="pizza-rank-container rank4-pizza">
-                            <div class="rank-pizza-title">
-                                <div id="rank4-pizza-order">
-                                   
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="rank-pizza-name" id="rank4-pizza-name">
-
-                            </div>
-                        </div>
-                        <div class="pizza-rank-container rank5-pizza">
-                            <div class="rank-pizza-title">
-                                <div id="rank5-pizza-order">
-                                
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="rank-pizza-name" id="rank5-pizza-name">
-
-                            </div>
-                        </div>
-                    </div>
-                    <a  href="dashboard-monthly.html" class="content-container" id="monthly-revenue">
+                    <div class="content-container" id="monthly-revenue-detail">
                         <div class="container-title">
-                            <div>
+                            <a href="index.html" class="back-button fa-solid fa-circle-chevron-left fa-2xl"></a>
+                            <div class="detail-title">
                                 MONTHLY SALES REVENUE
                             </div>
                             <i class="fa-solid fa-chart-column fa-2xl"></i>
                         </div>
                         <canvas id="revenue" style="max-height: 300px;"  ></canvas>
-                    </a>
-                </div>
-                <div class="overall-content">
-                    <a href="dashboard-price.html"  class="content-container" id="pizza-price">
-                        <div class="container-title">
-                            <div>
-                                PIZZA PRICE
-                            </div>
-                            <i class="fa-solid fa-arrows-rotate fa-xl"></i>
-                        </div>
-                        <canvas id="price" ></canvas>
-                        <canvas id="pricePie" ></canvas>
-                    </a>
-                    <a href="dashboard-size.html"  class="content-container" id="pizza-size"  onclick="onChangePricePie()">
-                        <div class="container-title">
-                            <div>
-                                PIZZE SIZE
-                            </div>
-                            <i class="fa-solid fa-arrows-rotate fa-xl"></i>
-                        </div>
-                        <!-- <div class="sizePieContainer">
-                            <canvas id="size" ></canvas>
-                            <canvas id="sizePie" ></canvas>
-                        </div> -->
-                        <canvas id="size" ></canvas>
-                        <canvas id="sizePie" ></canvas>
-                    </a>
-                    <a href="dashboard-category.html"  class="content-container" id="pizza-cat">
-                        <div class="container-title">
-                            <div>
-                                PIZZA CATEGORY
-                            </div>
-                            <i class="fa-solid fa-arrows-rotate fa-xl"></i>
-                        </div>
-                        <canvas id="cat" ></canvas>
-                        <canvas id="catPie" ></canvas>
-                    </a>
+                    </div>
+                    <!-- <div class="content-container" id="pizza-rank">
+                        
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -563,16 +450,9 @@
     <script src="script/rotate.js"></script>
     <script src="script/receive-data.js"></script>
     <script src="script/process-data.js"></script>
-    <script src="script/summary.js"></script>
-    <script src="script/rank.js"></script> 
+    <script src="script/summary.js"></script> 
     <script src="script/chart-change.js"></script> 
     <script src="chart/MonthlyRevenueSales.js"></script>
-    <script src="chart/OrderPerPizzaCat.js"></script> 
-    <script src="chart/OrderPerPizzaSize.js"></script> 
-    <script src="chart/OrderPerPizzaPrice.js"></script>
-    <script src="chart/Pie-OrderPerPizzaCat.js"></script> 
-    <script src="chart/Pie-OrderPerPizzaPrice.js"></script> 
-    <script src="chart/Pie-OrderPerPizzaSize.js"></script> 
     <script>
         handleCheckboxChange();
     </script>

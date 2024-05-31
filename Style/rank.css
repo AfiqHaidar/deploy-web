@@ -1,0 +1,92 @@
+.overall-content{
+    height: fit-content;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.content-container {
+    height: fit-content;
+    width: 33%;
+
+    border-radius: 10px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(15, 15, 15);
+
+    color: white;
+}
+
+#pizza-rank {
+    width: 30%;
+}
+
+.container-title {
+    width: 100%;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.pizza-rank-container {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom:10px ;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rank1-pizza {
+    background-color: #FF2D2680;
+}
+
+.rank2-pizza {
+    background-color: #FF632C80;
+}
+
+.rank3-pizza {
+    background-color: #FF7E3080;
+}
+
+.rank4-pizza {
+    background-color: #FFB23580;
+}
+
+.rank5-pizza {
+    background-color: #FFDF3B80;
+}
+
+.rank-pizza-title {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: x-small;
+}
+
+.rank-pizza-name {
+    font-weight: bolder;
+    width: 100%;
+}
