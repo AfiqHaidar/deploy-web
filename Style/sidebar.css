@@ -1,14 +1,4 @@
 .sidebar-head {
-    /* height: fit-content;
-    margin: 10px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; */
-
     height: fit-content;
     margin: 10px;
     margin-top: 30px;
@@ -18,6 +8,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar-head {
+        flex-direction: column;
+    }
 }
 
 .pizza-logo {
@@ -53,12 +49,6 @@
 }
 
 .sidebar-title {
-    /* display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    font-size: larger;
-    letter-spacing: 1px;  */
-
     display: flex;
     flex-direction: column;
     font-weight: bold;
@@ -106,6 +96,16 @@
     gap: 10px;
 }
 
+@media screen and (max-width: 480px) {
+    .sidebar-body {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+        margin-bottom: 30px;
+        gap: 20px;
+    }
+}
+
 .time-filter {
     height: fit-content;
     width: 50%;
@@ -118,7 +118,16 @@
     justify-content: center;
     align-items: start;
     gap: 10px;
+}
 
+@media screen and (max-width: 480px) {
+    .time-filter {
+        flex-direction: column;
+        width: 85%;
+        padding: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }    
 }
 
 
@@ -155,6 +164,16 @@
     justify-content: center;
     align-items: start;
     gap: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .pizza-filter {
+        flex-direction: column;
+        width: 85%;
+        padding: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }   
 }
 
 .pizza-filter::before {

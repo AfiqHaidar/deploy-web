@@ -24,14 +24,10 @@ body {
     display: flex;
 }
 
-.sidebar {
-    width: 25%;
-
-    margin: 10px;
-    border-radius: 20px;
-
-    background-color: rgb(8, 8, 8);
-    /* box-shadow: 5px 5px 5px  #c2340067; */
+@media screen and (max-width: 480px) {
+    .dashboard {
+        border-radius: none;
+    }
 }
 
 .main-content {
@@ -44,5 +40,13 @@ body {
     /* background-color: rgb(8, 8, 8); */
     background-color: rgb(29, 29, 29);
      box-shadow: 5px 5px 1px  #d1d1d167;
-    
+}
+
+@media screen and (max-width: 480px) {
+    .main-content {
+        margin: 0px;
+        padding: 0px;
+       
+        box-shadow: none;
+    }
 }

@@ -6,6 +6,14 @@
     gap: 10px; /* Optional: adds space between grid items */
 } 
 
+@media screen and (max-width: 480px) {
+    .about-us-grid {
+        grid-template-columns: repeat(1, 1fr); /* 4 columns with equal width */
+        grid-template-rows: repeat(1, auto);
+        gap: 20px;
+    }
+}
+
 .person-grid {
     display: flex;
     flex-direction: column;

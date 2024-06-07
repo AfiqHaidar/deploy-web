@@ -2,12 +2,22 @@
     font-size: x-large;
 }
 
+@media screen and (max-width: 480px) {
+    .detail-title{
+        font-size: medium;
+    }
+}
+
 .back-button {
     color: white;
     text-decoration: none;
 
     transition: color 0.5s ease;
     transition: transform 0.5s ease;
+}
+
+@media screen and (max-width: 480px) {
+
 }
 
 .back-button:hover {
@@ -23,9 +33,20 @@
     transition: transform 0.3s ease;/* Corrected transition property */
 }
 
+@media screen and (max-width: 480px) {
+ #monthly-revenue {
+    width: 80%;
+ }
+}
+
 #monthly-revenue-detail, #pizza-price-detail, #pizza-cat-detail, #pizza-size-detail {
     width: 100%;
+}
 
+@media screen and (max-width: 480px) {
+    #monthly-revenue-detail, #pizza-price-detail, #pizza-cat-detail, #pizza-size-detail {
+        width: 80%;
+    }
 }
 
 .double-chart {
@@ -43,6 +64,20 @@
 
 .pied {
     width: 30%;
+}
+
+@media screen and (max-width: 480px) {
+    .double-chart {
+        flex-direction: column;
+    }
+
+    .lined {
+        width: 100%;
+    }
+
+    .pied {
+        width: 100%;
+    }
 }
 
 

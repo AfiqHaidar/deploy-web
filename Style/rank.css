@@ -9,7 +9,15 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    
+}
+
+@media screen and (max-width: 480px) {
+    .overall-content {
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+    }
 }
 
 .content-container {
@@ -29,8 +37,20 @@
     color: white;
 }
 
+@media screen and (max-width: 480px) {
+    .content-container {
+        width: 80%;
+    }
+}
+
 #pizza-rank {
     width: 30%;
+}
+
+@media screen and (max-width: 480px) {
+    #pizza-rank {
+        width: 80%;
+    }
 }
 
 .container-title {
