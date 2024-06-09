@@ -7,7 +7,7 @@ function orderPerPizzaCatpie(category, orderPerCategoryPie) {
         catPiechart.destroy();
     }
 
-    const data = category.map(cat => orderPerCategoryPie[cat] || 0); // Map categories to corresponding order data
+    const data = category.map(cat => orderPerCategoryPie[cat] || 0); 
 
     catPiechart = new Chart(ctxCatpie, {
         type: 'pie',
@@ -15,7 +15,7 @@ function orderPerPizzaCatpie(category, orderPerCategoryPie) {
             labels: category,
             datasets: [{
                 label: 'Orders per Category',
-                data: data, // Use the mapped data
+                data: data,
                 borderWidth: 1
             }]
         }

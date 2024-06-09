@@ -10,7 +10,7 @@ function orderPerPizzaCat(months, category, orderPerCat) {
     const datasets = category.map(range => {
         return {
             label: range,
-            data: orderPerCat[range], // Placeholder data, replace this with your actual data
+            data: orderPerCat[range], 
             borderWidth: 1
         };
     });

@@ -1,14 +1,14 @@
 .about-us-grid {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(6, 1fr); /* 4 columns with equal width */
-    grid-template-rows: repeat(2, auto);   /* 3 rows, auto height */
-    gap: 10px; /* Optional: adds space between grid items */
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 10px;
 } 
 
 @media screen and (max-width: 480px) {
     .about-us-grid {
-        grid-template-columns: repeat(1, 1fr); /* 4 columns with equal width */
+        grid-template-columns: repeat(1, 1fr); 
         grid-template-rows: repeat(1, auto);
         gap: 20px;
     }
@@ -17,12 +17,12 @@
 .person-grid {
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Horizontally center the content */
+    justify-content: center;  
     align-items: center; 
     position: relative;
         
     background-color: #f9f9f9;
-    color: black;/* Optional: adds a background color to each grid item */
+    color: black;
 
     border-radius: 20px;
     width: 100%;
@@ -41,9 +41,9 @@
     left: -2px;
     right: -2px;
     bottom: -2px;
-    z-index: 5; /* Ensure the pseudo-element is behind the content */
-    border-radius: 25px; /* Match the border-radius of the .pizza-filter */
-    padding: 6px; /* Space between the pseudo-element and the .pizza-filter border */
+    z-index: 5;
+    border-radius: 25px; 
+    padding: 6px;
     background: linear-gradient(90deg,  rgba(255,99,44,1) 0%, rgba(255,229,59,1) 100%);
     -webkit-mask: 
         linear-gradient(#fff 0 0) content-box, 
@@ -67,7 +67,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     text-align: center;
     padding: 10px 0;

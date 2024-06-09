@@ -1,29 +1,11 @@
 
 function processData({ months: selectedMonths, days: selectedDays, priceRange: selectedPriceRange, periods: selectedPeriods, category: selectedCategory, sizep: selectedSize } ) {
 
-    console.log("Selected months:", selectedMonths);
-    console.log("Selected days:", selectedDays);
-    console.log("Selected price ranges:", selectedPriceRange);
-    console.log("Selected periods:", selectedPeriods);
-    console.log("Selected categories:", selectedCategory);
-    console.log("Selected sizes:", selectedSize);
-
-    // ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const months = selectedMonths;
-
-    // [ "< 10", "10 - 15", "15 - 20","20 - 25","25 - 30","> 30",];
     const priceRange = selectedPriceRange;
-
-    // ['Monday', 'Wednesday', 'Tuesday','Sunday', 'Thursday', 'Friday', 'Saturday'];
     const days = selectedDays;
-
-    // ['Morning', 'Night', 'Afternoon', 'Evening'];
     const periods = selectedPeriods;
-
-    // ['Classic', 'Veggie', 'Supreme', 'Chicken'];
     const category = selectedCategory;
-
-    // ['S', 'M', 'L', 'XL', 'XXL'];
     const sizep = selectedSize;
 
      // data prep
@@ -129,23 +111,10 @@ function processData({ months: selectedMonths, days: selectedDays, priceRange: s
                 acc[pizzaType] = count;
                 return acc;
             }, {});
-
-        console.log("total rev :", totalRevenue);
-        console.log("total order: ", totalOrder);
-        console.log(revenuePerMonths);
-        console.log(orderPerMonths);
-        console.log(orderPerPrice);
-        console.log(pizzaTypeCount);
-        console.log(top5pizza);
-        console.log(orderPerCategoryPie);
-
-        
         
         function safeFunctionCall(functionName, ...args) {
             if (typeof window[functionName] === 'function') {
                 window[functionName](...args);
-            } else {
-                console.warn(`Function ${functionName} does not exist.`);
             }
         }
         

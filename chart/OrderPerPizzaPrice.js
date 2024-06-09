@@ -10,7 +10,7 @@ function orderPerPizzaPrice(months, priceRange, orderPerPrice) {
     const datasets = priceRange.map(range => {
         return {
             label: range,
-            data: orderPerPrice[range], // Placeholder data, replace this with your actual data
+            data: orderPerPrice[range], 
             borderWidth: 1
         };
     });

@@ -23,7 +23,7 @@ function monthlyRevenue(months, revenuePerMonths) {
         plugins: {
             legend: {
                 labels: {
-                    // This more specific font property overrides the global property
+                    
                     font: {
                         size: 16
                     }
@@ -39,14 +39,14 @@ function monthlyRevenue(months, revenuePerMonths) {
             x: {
               ticks: {
                 font: {
-                    size: 16 // Set the font size for the x-axis labels (months)
+                    size: 16 
                 }
               }
             },
             y: {
                 ticks: {
                   font: {
-                      size: 16 // Set the font size for the x-axis labels (months)
+                      size: 16 
                   }
                 }
               }

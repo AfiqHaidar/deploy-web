@@ -10,7 +10,7 @@ function orderPerPizzaSize(months, size, orderPerSize) {
     const datasets = size.map(range => {
         return {
             label: range,
-            data: orderPerSize[range], // Placeholder data, replace this with your actual data
+            data: orderPerSize[range], 
             borderWidth: 1
         };
     });
